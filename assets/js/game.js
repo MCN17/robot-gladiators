@@ -10,13 +10,29 @@ var playerMoney = 10;
 
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roberto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 
 var enemyHealth = 50;
 
 var enemyAttack = 12;
 
-var fight = function() {
+/*console.log(enemyNames.length);
+
+for(var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames[i]);
+  console.log(i);
+  console.log(enemyNames[i] + " is at " + i + " index");
+}
+*/
+
+/* console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]); */
+
+
+
+
+var fight = function(enemyName) {
 
     // Alert players that they are starting the round
 
@@ -104,6 +120,13 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 }
 
 
+// Game States
+
+// "WIN" - Player robot has defeated all enemy-robots
+// * Fight all enemy-robots
+// * Defeat each enemy-robot
+
+// "LOSE" - Player robot's health is zero or less
 
 
 
@@ -119,4 +142,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
 
 
- fight();
+// run fight function to start game
+
+for (var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
+
