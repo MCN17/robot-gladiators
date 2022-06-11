@@ -242,6 +242,7 @@ var getPlayerName = function() {
 /* GAME INFORMATION / VARIABLES */
 
 var playerInfo = {
+  
   name: getPlayerName(),
   health: 100,
   attack: 10,
